@@ -1,0 +1,22 @@
+# Secrets — never commit
+.env
+*.key
+*.pem
+*credentials*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.python-version
+*.egg-info/
+dist/
+build/
+
+# Tooling
+.langgraph_api/
+.ruff_cache/
+.pytest_cache/
+.DS_Store
+
+.claude

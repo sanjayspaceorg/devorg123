@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "pov_agent": "./src/pov_agent/agent.py:agent"
+  },
+  "env": "./.env"
+}
