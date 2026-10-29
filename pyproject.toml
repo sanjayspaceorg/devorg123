@@ -1,30 +1,11 @@
 [project]
-name = "pov-init-agent"
-version = "0.1.0"
-description = "Pre-populate a LangSmith workspace with a working deep agent, traces, a dataset, evaluators (offline + online), an annotation queue, and automations."
+name = "test-mcp"
+version = "1.0.0"
+description = "Simple MCP server for testing purposes."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
-    "deepagents>=0.5.2",
-    "langgraph>=0.2",
-    "langgraph-cli[inmem]>=0.1.55",
-    "langsmith>=0.7",
-    "langchain>=0.3",
-    "langchain-anthropic>=0.3",
-    "langchain-openai>=0.2",
-    "python-dotenv>=1.0",
-    "httpx>=0.27",
+    "fastmcp>=2.12.2",
+    "requests>=2.32.3",
+    "pyside6>=6.9.0", # Only needed for simple_ui.py
 ]
-
-[project.scripts]
-pov-bootstrap = "pov_agent.langsmith.bootstrap:main"
-
-[tool.uv]
-package = true
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/pov_agent"]
